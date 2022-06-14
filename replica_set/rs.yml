@@ -5,13 +5,14 @@ metadata:
 spec:
   replicas: 3
   selector:
-    matchLabels:
-      app: frontend
+    matchExpressions:
+      - key: app
+        operator: Exists
   template:
     metadata:
       name: whoami
       labels:
-        app: frontend
+        app: backend
     spec:
       containers:
       - name: whoami
