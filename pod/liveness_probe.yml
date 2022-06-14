@@ -1,0 +1,16 @@
+apiVersion: v1      
+kind: Pod                         # type of K8s object: Pod
+metadata:
+  name: firstpod                  # name of pod
+  labels:
+    app: frontend                 # label pod with "app:frontend"   
+spec:
+  containers: 
+  - name: unhealthy                   
+    image: luksa/kubia-unhealthy  # image name:image version, nginx downloads from DockerHub
+    ports:
+    - containerPort: 8080
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 8080
