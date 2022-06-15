@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongo-deploy
+  labels:
+    db: mongo
+spec:
+  replicas: 1                  
+  selector:                    
+    matchLabels:
+      db: mongo          
+
+  # Pod template
+  template:
+    metadata:
+      name: mongo-pod                
+      labels:
+        db: mongo        # Pod labels
+    spec:
+      containers:                       
+        - name: mongo                     
+          image: mongo:alpine     
+          imagePullPolicy: Always       
