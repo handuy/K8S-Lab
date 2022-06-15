@@ -3,6 +3,8 @@ kind: Job
 metadata:
   name: job
 spec:
+  completions: 6
+  parallelism: 3
   template:
     metadata:
       labels:
@@ -10,5 +12,5 @@ spec:
     spec:
       containers:
       - name: job
-        image: luksa/batch-job
+        image: luksa/batch-job 
       restartPolicy: OnFailure   
