@@ -23,7 +23,7 @@ spec:
           imagePullPolicy: Always 
           env:
             - name: PORT
-              value: 5000
+              value: "5000"
 
             - name: MONGODB_URI
-              value: mongodb://test-db:3000/app      
+              value: "mongodb://test-db:3000/app"
