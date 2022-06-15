@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-db
+spec:
+  type: ClusterIP        # Chỉ tạo Virtual IP
+  selector:
+    db: mongo       # Label selector
+  ports:
+    - protocol: TCP      # Protocol
+      port: 3000           # Port của service
+      targetPort: 27017   # Port của pod
