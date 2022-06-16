@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: node-service
 spec:
-  type: NodePort         # Virtual IP + map host port
+  type: LoadBalancer         # Virtual IP + map host port
   selector:
     app: nodejs       # Label selector
   ports:
