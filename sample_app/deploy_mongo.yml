@@ -19,5 +19,5 @@ spec:
     spec:
       containers:                       
         - name: mongo                     
-          image: mongo:alpine     
+          image: mongo     
           imagePullPolicy: Always       
