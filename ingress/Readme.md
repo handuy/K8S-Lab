@@ -16,6 +16,8 @@
 
 - kubectl apply -f deploy.yml
 
+- kubectl apply -f app_1.yml
+
 - kubectl apply -f ingress_class.yml
 
-- kubectl apply -f app_1.yml
+- kubectl apply -f ingress_route.yml
