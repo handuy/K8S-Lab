@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.deploymentName }}
+  labels:
+    db: {{ .Values.deploymentLabel }}
+spec:
+  replicas: {{ .Values.replicaCount }}                  
+  selector:                    
+    matchLabels:
+      db: {{ .Values.podLabel }}          
+
+  # Pod template
+  template:
+    metadata:
+      name: {{ .Values.podname }}                
+      labels:
+        db: {{ .Values.podLabel }}
+    spec:
+      containers:                       
+        - name: {{ .Values.containerName }}                      
+          image: mongo     
+          imagePullPolicy: {{ .Values.imagePullPolicy }}       
