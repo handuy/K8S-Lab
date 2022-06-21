@@ -1,0 +1,30 @@
+deploymentName: node-deploy
+
+deploymentLabel: node
+
+replicaCount: 3
+
+podLabel: nodejs
+
+podname: node-app
+
+containerName: node-app
+
+imageVersion: minhpq331/demo-service
+
+imagePullPolicy: Always
+
+appPort: 5000
+
+mongoUrl: mongodb://mongo-svc:3000/app
+
+#################################
+
+serviceName: node-svc
+
+serviceType: NodePort
+
+servicePort: 3000
+
+nodePort: 30007
+
