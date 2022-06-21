@@ -1,0 +1,24 @@
+deploymentName: mongo-deploy
+
+deploymentLabel: mongo
+
+replicaCount: 1
+
+podLabel: mongo
+
+podname: mongodb
+
+containerName: my-mongo
+
+imagePullPolicy: Always
+
+#################################
+
+serviceName: mongo-svc
+
+serviceType: ClusterIP
+
+servicePort: 3000
+
+podPort: 27017
+
