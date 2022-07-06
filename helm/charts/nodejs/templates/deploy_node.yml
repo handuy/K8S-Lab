@@ -23,7 +23,7 @@ spec:
           imagePullPolicy: {{ .Values.imagePullPolicy }} 
           env:
             - name: PORT
-              value: {{ .Values.appPort }}
+              value: "{{ .Values.appPort }}"
 
             - name: MONGODB_URI
-              value: {{ .Values.mongoUrl }} # mongodb://test-db:3000/app      
+              value: "{{ .Values.mongoUrl }}" # mongodb://test-db:3000/app      
