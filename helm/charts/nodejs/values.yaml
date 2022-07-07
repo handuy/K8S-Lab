@@ -2,7 +2,7 @@ deploymentName: node-deploy
 
 deploymentLabel: node
 
-replicaCount: 3
+replicaCount: 5
 
 podLabel: nodejs
 
